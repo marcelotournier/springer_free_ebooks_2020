@@ -23,7 +23,7 @@ def get_download_url(url):
 
 
 def write_pdf(book):
-	title = book[1].replace('"',"").rstrip()
+	title = book[1].replace('"',"").replace("/","").rstrip()
 	url = get_download_url(book[-1])
 	if url != "":
 		print("[downloading] " + book[1])
